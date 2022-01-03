@@ -129,8 +129,7 @@
           <li class="flex items-center">
             <button
               class="
-                bg-white
-                text-blueGray-700
+                text-white
                 active:bg-blueGray-50
                 text-xs
                 font-bold
@@ -147,10 +146,17 @@
                 ease-linear
                 transition-all
                 duration-150
+                bg-red-500
+                flex
               "
               type="button"
+              @click="RedirectToLogin()"
             >
-              Post Job
+              <LoginIcon
+                class="ml-2 h-5 mr-2 w-5 text-white"
+                aria-hidden="true"
+              />
+              Login
             </button>
           </li>
         </ul>
@@ -161,6 +167,7 @@
 
 <script>
 import { MenuIcon } from "@heroicons/vue/solid";
+import { LoginIcon } from "@heroicons/vue/outline";
 export default {
   data() {
     return {
@@ -169,6 +176,12 @@ export default {
   },
   components: {
     MenuIcon,
+    LoginIcon,
+  },
+  methods: {
+    RedirectToLogin() {
+      this.$router.push("/login");
+    },
   },
 };
 </script>
