@@ -137,7 +137,7 @@ export default {
           this.$router.push("/admin");
         }, 3000);
       }
-      // axios.se
+
       // axios
 
       //   .post(`login`, {
