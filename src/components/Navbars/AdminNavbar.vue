@@ -158,7 +158,7 @@ export default {
   methods: {
     logout() {
       localStorage.removeItem("isLoggedIn");
-      this.$router.push("/dashboard");
+      this.$router.push("/");
     },
   },
 };

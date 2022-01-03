@@ -12,7 +12,7 @@ const routes = [
     meta: { requiresVisitor: true },
   },
   {
-    path: "/dashboard",
+    path: "/",
     name: "Dashboard",
     component: Dashboard,
     meta: { requiresVisitor: true },

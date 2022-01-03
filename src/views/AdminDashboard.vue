@@ -357,6 +357,12 @@ export default {
       console.log(job);
       this.myJobs.push(job);
     },
+    redirectOut() {
+      const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+      if (isLoggedIn === null || undefined) {
+        this.$router.push("/");
+      }
+    },
     showMore(page) {
       this.data.page = page;
       this.data.currentPage = page;
@@ -364,6 +370,7 @@ export default {
   },
   mounted() {
     this.fetchMyJobs();
+    this.redirectOut();
   },
 };
 </script>
